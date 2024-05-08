@@ -2,11 +2,11 @@
 import {signIn} from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
-import {useState} from "react";
+import { useState } from "react";
 
 export default function RegisterPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [creatingUser, setCreatingUser] = useState(false);
   const [userCreated, setUserCreated] = useState(false);
   const [error, setError] = useState(false);
@@ -15,61 +15,76 @@ export default function RegisterPage() {
     setCreatingUser(true);
     setError(false);
     setUserCreated(false);
-    const response = await fetch('/api/register', {
-      method: 'POST',
-      body: JSON.stringify({email, password}),
-      headers: {'Content-Type': 'application/json'},
+    const response = await fetch("/api/register", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
       setUserCreated(true);
-    }
-    else {
+    } else {
       setError(true);
     }
     setCreatingUser(false);
   }
+
   return (
-    <section className="mt-8">
-      <h1 className="text-center text-primary text-4xl mb-4">
-        Register
-      </h1>
-      {userCreated && (
-        <div className="my-4 text-center">
-          User created.<br />
-          Now you can{' '}
-          <Link className="underline" href={'/login'}>Login &raquo;</Link>
+    <div className="hero flex mt-10  ">
+      <div className="image-container">
+        <h2 className="text-orange-400 font-bold text-3xl mb-5 ">
+          Добро пожаловать!
+        </h2>
+        <div className="font-semibold text-center p-4">
+        Пожалуйста, войдите, чтобы оставаться на связи.
         </div>
-      )}
-      {error && (
-        <div className="my-4 text-center">
-          An error has occurred.<br />
-          Please try again later
+        <div className="text-center my-4 bg-orange-400  border p-2 rounded-xl w-1/2     ">
+          <Link href={'/login'}>Войти </Link>
         </div>
-      )}
-      <form className="block max-w-xs mx-auto" onSubmit={handleFormSubmit}>
-        <input type="email" placeholder="email" value={email}
-               disabled={creatingUser}
-               onChange={ev => setEmail(ev.target.value)} />
-        <input type="password" placeholder="password" value={password}
-               disabled={creatingUser}
-                onChange={ev => setPassword(ev.target.value)}/>
-        <button type="submit" disabled={creatingUser}>
-          Register
-        </button>
-        <div className="my-4 text-center text-gray-500">
-          or login with provider
+      </div>
+      <div className="form-container shadow-2xl">
+        <h1 className="text-orange-500 font-bold text-4xl ">Создать аккаунт</h1>
+        <div className="social-logins text-center ">
+          <button onClick={() => signIn("google", { callbackUrl: "/" })}>
+            <Image src="/google.png" alt="Google" width={24} height={24} />
+            <div className="ml-2 ">Google</div>
+          </button>
         </div>
-        <button
-          onClick={() => signIn('google', {callbackUrl:'/'})}
-          className="flex gap-4 justify-center">
-          <Image src={'/google.png'} alt={''} width={24} height={24} />
-          Login with google
-        </button>
-        <div className="text-center my-4 text-gray-500 border-t pt-4">
-          Existing account?{' '}
-          <Link className="underline" href={'/login'}>Login here &raquo;</Link>
-        </div>
-      </form>
-    </section>
+        <div className="mb-4">Или зарегистрируйтесь с помощью:</div>
+
+        {userCreated && (
+          <div className="my-4 text-center">
+            Аккаунт создан.
+            <br />
+            Теперь вы можете{" "}
+            <Link className="underline" href={"/login"}>
+              войти &raquo;
+            </Link>
+          </div>
+        )}
+        {error && <p>Произошла ошибка. Попробуйте позже.</p>}
+        <form onSubmit={handleFormSubmit}>
+          <input
+            type="email"
+            placeholder="Эл. почта"
+            value={email}
+            disabled={creatingUser}
+            onChange={(ev) => setEmail(ev.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Пароль"
+            value={password}
+            disabled={creatingUser}
+            onChange={(ev) => setPassword(ev.target.value)}
+          />
+          <div className="text-center">
+            <button type="submit" disabled={creatingUser}>
+              Зарегистрироваться
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }
+

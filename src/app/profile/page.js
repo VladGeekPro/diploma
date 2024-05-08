@@ -19,6 +19,11 @@ export default function ProfilePage() {
   const [profileFetched, setProfileFetched] = useState(false);
   const {status} = session;
 
+
+
+
+
+
   useEffect(() => {
     if (status === 'authenticated') {
       fetch('/api/profile').then(response => {

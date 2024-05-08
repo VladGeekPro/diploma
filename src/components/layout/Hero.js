@@ -1,34 +1,44 @@
-import Right from "@/components/icons/Right";
 import Image from "next/image";
+import Right from "../icons/Right";
 
 export default function Hero() {
   return (
-    <section className="hero md:mt-4">
-      <div className="py-8 md:py-12">
-        <h1 className="text-4xl font-semibold">
-          Everything<br />
-          is better<br />
-          with a&nbsp;
-          <span className="text-primary">
-            Pizza
-          </span>
+    <section className="hero mt-4">
+      <div className="py-12">
+        <h1 className="text-4xl font-semibold ">
+          Ваш новый мир в одном{" "}
+          <span className="text-blue-600">устройстве</span>
         </h1>
-        <p className="my-6 text-gray-500 text-sm">
-          Pizza is the missing piece that makes every day complete, a simple yet delicious joy in life
+        <p className="my-6 text-orange-400 text-sm">
+          Откройте для новую коллекцию смартфонов.
+          <br/>Каждый телефон — возможность,
+          удобства и связи.
         </p>
-        <div className="flex gap-4 text-sm">
-          <button className="flex justify-center bg-primary uppercase flex items-center gap-2 text-white px-4 py-2 rounded-full">
-            Order now
+        <div className="flex gap-6 items-center text-sm">
+          <button
+            className="flex gap-2 bg-blue-600  text-white rounded-full  px-4 py-1 "
+            style={{ whiteSpace: "nowrap" }}
+          >
+            Заказать сейчас
             <Right />
           </button>
-          <button className="flex items-center border-0 gap-2 py-2 text-gray-600 font-semibold">
-            Learn more
+          <button
+            className="flex gap-2 bg-orange-600 text-white rounded-full px-4 py-1 "
+            style={{ whiteSpace: "nowrap" }}
+          >
+            Узнать больше
             <Right />
           </button>
         </div>
       </div>
-      <div className="relative hidden md:block">
-        <Image src={'/pizza.png'} layout={'fill'} objectFit={'contain'} alt={'pizza'} />
+
+      <div className="relative gap-8">
+        <Image
+          src={"/PhoneLogo.webp"}
+          layout={"fill"}
+          objectFit={"cover"}
+          alt={"phone"}
+        />
       </div>
     </section>
   );

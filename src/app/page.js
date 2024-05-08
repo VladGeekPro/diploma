@@ -1,3 +1,4 @@
+
 import Header from "@/components/layout/Header";
 import Hero from "@/components/layout/Hero";
 import HomeMenu from "@/components/layout/HomeMenu";
@@ -8,30 +9,48 @@ export default function Home() {
     <>
       <Hero />
       <HomeMenu />
-      <section className="text-center my-16" id="about">
-        <SectionHeaders
-          subHeader={'Our story'}
-          mainHeader={'About us'}
-        />
-        <div className="text-gray-500 max-w-md mx-auto mt-4 flex flex-col gap-4">
+
+      <div id="aboutUs" className="mt-8">
+        <SectionHeaders subHeader="Откройте для себя" mainHeader="О нас" />
+      </div>
+
+      <section  className=" mt-4  bg-gradient-to-b from-blue-600  to-orange-400 p-6 rounded-lg text-center relative overflow-hidden">
+        <div className="text-white max-w-3xl mx-auto mt-4 flex flex-col gap-4">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni minima odit recusandae. Illum ipsa non repudiandae? Eum ipsam iste quos suscipit tempora? Aperiam esse fugiat inventore laboriosam officiis quam rem!
+            Наш интернет-магазин предлагает широкий ассортимент телефонов, от
+            лидеров рынка до эксклюзивных новинок. Мы заботимся о том, чтобы
+            каждый клиент нашел своё идеальное устройство.
           </p>
-          <p>At consectetur delectus ducimus est facere iure molestias obcaecati quaerat vitae voluptate? Aspernatur dolor explicabo iste minus molestiae pariatur provident quibusdam saepe?</p>
-          <p>Laborum molestias neque nulla obcaecati odio quia quod reprehenderit sit vitae voluptates? Eos, tenetur.</p>
+          <p>
+            Обращая особое внимание на качество и сервис, мы предлагаем не
+            только продукцию, но и поддержку на всех этапах выбора и
+            использования.
+          </p>
+          <p>
+            Здесь вы найдете не только телефоны, но и уникальные предложения —
+            аксессуары, гаджеты для дома и многое другое.
+          </p>
+          <button className="mt-6 py-2 px-4 bg-orange-400 rounded hover:bg-orange-300 transition duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
+            Узнать больше
+          </button>
         </div>
       </section>
-      <section className="text-center my-8" id="contact">
+
+      <div className="mt-8">
         <SectionHeaders
-          subHeader={'Don\'t hesitate'}
-          mainHeader={'Contact us'}
+          subHeader="Не упусти шанс"
+          mainHeader="Свяжись с нами сейчас!"
         />
-        <div className="mt-8">
-          <a className="text-4xl underline text-gray-500" href="tel:+46738123123">
-            +46 738 123 123
+      </div>
+      <section className=" mt-4  bg-gradient-to-t from-blue-600  to-orange-400 p-6 rounded-lg text-center relative overflow-hidden">
+          <a
+            className="text-4xl font-bold text-white hover:text-orange-400 transition duration-300 ease-in-out transform hover:scale-110"
+            href="tel:+37368943589"
+          >
+            +373 689 43 589
           </a>
-        </div>
       </section>
+
     </>
-  )
+  );
 }

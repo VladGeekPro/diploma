@@ -52,7 +52,7 @@ export default function MenuItem(menuItem) {
 
   return (
     <>
-      {showPopup && (
+      {/* {showPopup && (
         <div
           onClick={() => setShowPopup(false)}
           className="fixed inset-0 bg-black/80 flex items-center justify-center">
@@ -122,7 +122,7 @@ export default function MenuItem(menuItem) {
             </div>
           </div>
         </div>
-      )}
+      )} */}
       <MenuItemTile
         onAddToCart={handleAddToCartButtonClick}
         {...menuItem} />
