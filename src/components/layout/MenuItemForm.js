@@ -64,14 +64,14 @@ export default function MenuItemForm({onSubmit,menuItem}) {
             value={basePrice}
             onChange={ev => setBasePrice(ev.target.value)}
           />
-          <MenuItemPriceProps name={'Sizes'}
+          {/* <MenuItemPriceProps name={'Sizes'}
                               addLabel={'Add item size'}
                               props={sizes}
                               setProps={setSizes} />
           <MenuItemPriceProps name={'Extra ingredients'}
                               addLabel={'Add ingredients prices'}
                               props={extraIngredientPrices}
-                              setProps={setExtraIngredientPrices}/>
+                              setProps={setExtraIngredientPrices}/> */}
           <button type="submit">Save</button>
         </div>
       </div>

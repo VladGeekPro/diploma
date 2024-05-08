@@ -9,7 +9,7 @@ section.hero {
 
 .image-container {
   /* @apply bg-gradient-to-r from-blue-600 to-violet-500 flex flex-col justify-center items-center text-white  px-4 mx-4 rounded-2xl  ; */
-  @apply bg-gradient-to-b from-blue-600  to-orange-400 flex flex-col justify-center items-center text-white  px-4 mx-4 rounded-2xl  ;
+  @apply bg-gradient-to-b from-blue-600  to-orange-400 flex flex-col justify-center items-center text-white  px-4 mx-4 rounded-2xl;
 }
 
 .form-container {
@@ -32,8 +32,9 @@ input[type="text"]:disabled {
 }
 
 label {
-  @apply text-gray-500 text-sm leading-tight;
+  @apply text-orange-600 text-lg leading-tight font-semibold;
 }
+
 label + input {
   margin-top: -2px;
 }
@@ -58,7 +59,6 @@ div.tabs > *.active {
   @apply bg-blue-600 text-white;
 }
 
-
 .flying-button-parent button {
   @apply bg-orange-500 text-black text-sm rounded-full px-6 py-2;
 }
@@ -71,4 +71,4 @@ button {
   @apply mt-4 mb-4 inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm  font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700;
 }
 
-
+/* new stylr */

@@ -1,44 +1,96 @@
-'use client';
+"use client";
 import Link from "next/link";
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 
-export default function UserTabs({isAdmin}) {
+export default function UserTabs({ isAdmin }) {
   const path = usePathname();
   return (
-    <div className="flex mx-auto gap-2 tabs justify-center flex-wrap">
+    <div
+      className="bg-gradient-to-b from-blue-400 to-orange-400 "
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",  // Изменено для выравнивания по левому краю
+        justifyContent: "start",
+        width: "100%",
+        padding: "40px",
+        boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+      }}
+    >
       <Link
-        className={path === '/profile' ? 'active' : ''}
-        href={'/profile'}
+        style={{
+          display: "block",
+          padding: "10px",
+          marginBottom: "5px",
+          color: path === "/profile" ? "#FFFFFF" : "#000000",
+          background: path === "/profile" ? "#6C5CE7" : "transparent",
+          borderRadius: "10px",
+          textDecoration: "none",
+        }}
+        href="/profile"
       >
-        Profile
+        Профиль
       </Link>
       {isAdmin && (
         <>
           <Link
-            href={'/categories'}
-            className={path === '/categories' ? 'active' : ''}
+            href="/categories"
+            style={{
+              display: "block",
+              padding: "10px",
+              marginBottom: "5px",
+              color: path === "/categories" ? "#FFFFFF" : "#000000",
+              background: path === "/categories" ? "#6C5CE7" : "transparent",
+              borderRadius: "10px",
+              textDecoration: "none",
+            }}
           >
-            Categories
+            Разделы
           </Link>
           <Link
-            href={'/menu-items'}
-            className={path.includes('menu-items') ? 'active' : ''}
+            href="/menu-items"
+            style={{
+              display: "block",
+              padding: "10px",
+              marginBottom: "5px",
+              color: path.includes("menu-items") ? "#FFFFFF" : "#000000",
+              background: path.includes("menu-items")
+                ? "#6C5CE7"
+                : "transparent",
+              borderRadius: "10px",
+              textDecoration: "none",
+            }}
           >
-            Menu Items
+            Каталог товаров
           </Link>
           <Link
-            className={path.includes('/users') ? 'active' : ''}
-            href={'/users'}
+            href="/users"
+            style={{
+              display: "block",
+              padding: "10px",
+              marginBottom: "5px",
+              color: path.includes("/users") ? "#FFFFFF" : "#000000",
+              background: path.includes("/users") ? "#6C5CE7" : "transparent",
+              borderRadius: "10px",
+              textDecoration: "none",
+            }}
           >
-            Users
+            Пользователи
           </Link>
         </>
       )}
       <Link
-        className={path === '/orders' ? 'active' : ''}
-        href={'/orders'}
+        href="/orders"
+        style={{
+          display: "block",
+          padding: "10px",
+          color: path === "/orders" ? "#FFFFFF" : "#000000",
+          background: path === "/orders" ? "#6C5CE7" : "transparent",
+          borderRadius: "10px",
+          textDecoration: "none",
+        }}
       >
-        Orders
+        Заказы
       </Link>
     </div>
   );

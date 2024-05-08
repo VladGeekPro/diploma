@@ -123,6 +123,7 @@ export default function MenuItem(menuItem) {
           </div>
         </div>
       )} */}
+      
       <MenuItemTile
         onAddToCart={handleAddToCartButtonClick}
         {...menuItem} />
