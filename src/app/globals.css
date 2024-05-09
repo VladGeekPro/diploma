@@ -32,17 +32,23 @@ input[type="text"]:disabled {
 }
 
 label {
-  @apply text-orange-600 text-lg leading-tight font-semibold;
+  @apply text-blue-600 text-lg leading-tight font-semibold;
 }
 
 label + input {
   margin-top: -2px;
 }
-button,
+/* button,
 .button {
   @apply flex w-full justify-center gap-2 text-gray-700 font-semibold;
   @apply border border-gray-300 rounded-xl px-6 py-2;
+} */
+
+button,
+.button {
+  @apply bg-blue-600 hover:bg-orange-400 text-white font-bold py-2 px-4 w-full rounded;
 }
+
 button[type="submit"],
 .submit,
 button.primary {
@@ -63,12 +69,45 @@ div.tabs > *.active {
   @apply bg-orange-500 text-black text-sm rounded-full px-6 py-2;
 }
 
-button {
-  @apply bg-blue-600 hover:bg-orange-400 text-white font-bold py-2 px-4 w-full rounded;
+.button-delete {
+  background: linear-gradient(to right, #e52d27 0%, #b31217 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.button-create {
+  background: linear-gradient(to right, #fdc830 0%, #f37335 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.button-change {
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .social-logins button {
   @apply mt-4 mb-4 inline-flex items-center justify-center px-4 py-2 border border-transparent shadow-sm text-sm  font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700;
 }
-
-/* new stylr */

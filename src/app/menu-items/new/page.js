@@ -50,9 +50,14 @@ export default function NewMenuItemPage() {
     return 'Not an admin.';
   }
 
-  return (
-    <section className="mt-8">
+  return (   
+<section className="mt-8 flex">
+      <div className="flex mr-4" style={{ width: "22%" }}>
       <UserTabs isAdmin={true} />
+        
+      </div>
+      
+      <div className="flex-1 max-w-2xl mx-auto">
       <div className="max-w-2xl mx-auto mt-8">
         <Link href={'/menu-items'} className="button">
           <Left />
@@ -60,6 +65,7 @@ export default function NewMenuItemPage() {
         </Link>
       </div>
       <MenuItemForm menuItem={null} onSubmit={handleFormSubmit} />
+      </div>
     </section>
   );
 }

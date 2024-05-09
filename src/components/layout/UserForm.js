@@ -24,11 +24,9 @@ export default function UserForm({ user, onSave }) {
   }
 
   return (
-    <div
-      className="md:flex gap-4 bg-gradient-to-b from-blue-200  to-blue-400 p-8 "
-    >
-      <div className="flex-none">
-        <div className="p-2 rounded-lg relative max-w-[120px]">
+    <div className="md:flex gap-4 bg-gradient-to-tl from-blue-600  to-orange-400 p-8 ">
+      <div className="flex-none ">
+        <div className="p-2 rounded-lg relative max-w-[200px]">
           <EditableImage link={image} setLink={setImage} />
         </div>
       </div>
