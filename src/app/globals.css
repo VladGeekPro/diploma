@@ -4,7 +4,7 @@
 
 section.hero {
   @apply block md:grid;
-  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-columns: 0.4fr 1.2fr;
 }
 
 .image-container {
@@ -66,7 +66,7 @@ div.tabs > *.active {
 }
 
 .flying-button-parent button {
-  @apply bg-orange-500 text-black text-sm rounded-full px-6 py-2;
+  @apply bg-orange-500 text-white text-sm rounded-full px-6 py-2;
 }
 
 .button-delete {
@@ -77,12 +77,23 @@ div.tabs > *.active {
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
 }
 
 .button-create {
+  background: linear-gradient(to right, #56ab2f 0%, #a8e063 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.button-change {
   background: linear-gradient(to right, #fdc830 0%, #f37335 100%);
   color: white;
   padding: 10px 20px;
@@ -90,22 +101,12 @@ div.tabs > *.active {
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
 }
 
-.button-change {
-  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
+.fancyOlea {
+  background: linear-gradient(to right, #00c6ff 0%, #0072ff 100%);
 }
 
 .social-logins button {

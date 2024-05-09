@@ -2,6 +2,7 @@
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -19,13 +20,11 @@ export default function LoginPage() {
 
   return (
     <div className="hero flex mt-10">
-      <Image
-        src="/welcome.png"
-        alt="Google"
-        width={500}
-        height={24}
-        className="rounded-xl mr-4"
-      />
+      <img
+        src="/welcome.webp"
+        alt="Welcome"
+        className="rounded-xl mr-4 w-1/2"
+      ></img>
 
       <div className="bg-white p-8 rounded-lg w-96 shadow-2xl ">
         <h1 className="text-center text-3xl font-bold text-orange-500 mb-6">
@@ -65,8 +64,6 @@ export default function LoginPage() {
               <Image src="/google.png" alt="Google" width={24} height={24} />
               <div className="ml-2 ">Google</div>
             </button>
-
-          
           </div>
         </form>
       </div>

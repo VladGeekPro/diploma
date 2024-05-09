@@ -81,7 +81,7 @@ export default function CategoriesPage() {
 
   return (
     <section className="mt-8  flex">
-      <div className="flex mr-4" style={{ width: "26%" }}>
+      <div className="flex mr-4" style={{ width: "30%" }}>
         <UserTabs isAdmin={true} />
       </div>
       <div className="flex-1  ">
@@ -146,9 +146,9 @@ export default function CategoriesPage() {
               categories.map((c) => (
                 <div
                   key={c._id}
-                  className="bg-yellow-900 rounded-xl p-2 px-4  gap-1 mb-1 items-center"
+                  className="  bg-gradient-to-r from-[#00c6ff] to-[#0072ff] rounded-xl p-2 px-4  gap-1 mb-1 items-center"
                 >
-                  <div className="grow text-orange-400 text-center text-xl font-semibold mb-2 ">
+                  <div className="grow text-white text-center text-xl font-semibold mb-2 ">
                     {c.name}
                   </div>
                   <div className="flex gap-2">

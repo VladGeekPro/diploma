@@ -10,19 +10,7 @@ export default function DeleteButton({ label, onDelete }) {
           <div>Ты уверен, что хочешь удалить?</div>
           <div className="flex gap-2 mt-1">
             <button
-              style={{
-                background:
-                  "linear-gradient(to right, #6a11cb 0%, #2575fc 100%)",
-                color: "white",
-                padding: "10px 20px",
-                borderRadius: "20px",
-                border: "none",
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                cursor: "pointer",
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-                fontWeight: "bold",
-              }}
+              className="button-change"
               onClick={() => setShowConfirm(false)}
             >
               Отмена

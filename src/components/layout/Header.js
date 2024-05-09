@@ -90,7 +90,7 @@ export default function Header() {
         >
           <Link href={"/"}>Главная</Link>
           <Link href={"/menu"}>Каталог</Link>
-          <Link href={"/#about"}>О нас</Link>
+          <Link href={"/#aboutUs"}>О нас</Link>
           <Link href={"/#contact"}>Контакты</Link>
           <AuthLinks status={status} userName={userName} />
         </div>
@@ -102,7 +102,7 @@ export default function Header() {
           </Link>
           <Link href={"/"}>Главная</Link>
           <Link href={"/menu"}>Каталог</Link>
-          <Link href={"/#about"}>О нас</Link>
+          <Link href={"/#aboutUs"}>О нас</Link>
           <Link href={"/#contact"}>Контакты</Link>
         </nav>
         <nav className="flex items-center gap-4 text-orange-400 font-semibold">

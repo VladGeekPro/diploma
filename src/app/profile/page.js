@@ -61,7 +61,7 @@ export default function ProfilePage() {
 
   return (
     <section className="mt-8 flex">
-      <div className="flex mr-4" style={{ width: "22%" }}>
+      <div className="flex mr-4" style={{ width: "28%" }}>
         {" "}
         {/* Установлено максимальное ограничение ширины для UserTabs */}
         <UserTabs isAdmin={isAdmin} />

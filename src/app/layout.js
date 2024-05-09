@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
             <Toaster />
             <Header />
             {children}
-            <footer className="mt-12 p-8 text-center text-gray-200 bg-gradient-to-b from-blue-700 to-orange-400  ">
+            <footer className="mt-12 p-8 text-center text-gray-200 bg-gradient-to-t from-[#373B44] to-[#4286f4]  ">
             <p className="text-sm text-white">© 2024 Все права защищены</p>
             <p className="text-xs mt-2 text-white">
               Разработано в <span className="font-semibold">ВЖ Телефон</span>

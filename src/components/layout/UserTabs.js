@@ -6,11 +6,11 @@ export default function UserTabs({ isAdmin }) {
   const path = usePathname();
   return (
     <div
-      className="bg-gradient-to-b from-blue-400 to-orange-400 "
+      className="text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff]"
       style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "flex-start",  // Изменено для выравнивания по левому краю
+        alignItems: "flex-start",
         justifyContent: "start",
         width: "100%",
         padding: "40px",
@@ -23,13 +23,14 @@ export default function UserTabs({ isAdmin }) {
           padding: "10px",
           marginBottom: "5px",
           color: path === "/profile" ? "#FFFFFF" : "#000000",
-          background: path === "/profile" ? "#6C5CE7" : "transparent",
+          background: path === "/profile" ? "#2563EB" : "transparent",
           borderRadius: "10px",
           textDecoration: "none",
+          color: "white",
         }}
         href="/profile"
       >
-        Профиль
+        👔 Профиль
       </Link>
       {isAdmin && (
         <>
@@ -40,12 +41,13 @@ export default function UserTabs({ isAdmin }) {
               padding: "10px",
               marginBottom: "5px",
               color: path === "/categories" ? "#FFFFFF" : "#000000",
-              background: path === "/categories" ? "#6C5CE7" : "transparent",
+              background: path === "/categories" ? "#2563EB" : "transparent",
               borderRadius: "10px",
               textDecoration: "none",
+              color: "white",
             }}
           >
-            Разделы
+            📑 Разделы
           </Link>
           <Link
             href="/menu-items"
@@ -55,13 +57,14 @@ export default function UserTabs({ isAdmin }) {
               marginBottom: "5px",
               color: path.includes("menu-items") ? "#FFFFFF" : "#000000",
               background: path.includes("menu-items")
-                ? "#6C5CE7"
+                ? "#2563EB"
                 : "transparent",
               borderRadius: "10px",
               textDecoration: "none",
+              color: "white",
             }}
           >
-            Каталог товаров
+            🧧 Каталог
           </Link>
           <Link
             href="/users"
@@ -70,28 +73,29 @@ export default function UserTabs({ isAdmin }) {
               padding: "10px",
               marginBottom: "5px",
               color: path.includes("/users") ? "#FFFFFF" : "#000000",
-              background: path.includes("/users") ? "#6C5CE7" : "transparent",
+              background: path.includes("/users") ? "#2563EB" : "transparent",
               borderRadius: "10px",
               textDecoration: "none",
+              color: "white",
             }}
           >
-            Пользователи
+            🤴 Пользователи
           </Link>
         </>
       )}
-      <Link
+      {/* <Link
         href="/orders"
         style={{
           display: "block",
           padding: "10px",
           color: path === "/orders" ? "#FFFFFF" : "#000000",
-          background: path === "/orders" ? "#6C5CE7" : "transparent",
+          background: path === "/orders" ? "#2563EB" : "transparent",
           borderRadius: "10px",
           textDecoration: "none",
         }}
       >
-        Заказы
-      </Link>
+       🍱 Заказы
+      </Link> */}
     </div>
   );
 }

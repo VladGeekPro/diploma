@@ -46,7 +46,16 @@ export default function EditableImage({ link, setLink }) {
       )}
       <label>
         <input type="file" className="hidden" onChange={handleFileChange} />
-        <span className="block p-2 border border-black shadow-2xl bg-white shadow-orange-500 rounded-lg  text-center cursor-pointer">
+        <span
+          className="block text-center cursor-pointer "
+          style={{
+            background: "#007BFF",
+            color: "#FFFFFF",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            fontSize: "16px",
+          }}
+        >
           Изменить фотографию
         </span>
       </label>

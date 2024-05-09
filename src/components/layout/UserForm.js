@@ -24,14 +24,8 @@ export default function UserForm({ user, onSave }) {
   }
 
   return (
-    <div className="md:flex gap-4 bg-gradient-to-tl from-blue-600  to-orange-400 p-8 ">
-      <div className="flex-none ">
-        <div className="p-2 rounded-lg relative max-w-[200px]">
-          <EditableImage link={image} setLink={setImage} />
-        </div>
-      </div>
+    <div className="md:flex gap-4  ">
       <form
-        className="grow"
         onSubmit={(ev) =>
           onSave(ev, {
             name: userName,
@@ -51,35 +45,37 @@ export default function UserForm({ user, onSave }) {
           boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
         }}
       >
-        <div className="grid grid-cols-2 gap-2">
-          <div>
-            <label>Имя и фамилия</label>
-            <input
-              type="text"
-              placeholder="Введите имя и фамилию"
-              value={userName}
-              onChange={(ev) => setUserName(ev.target.value)}
-              style={{
-                margin: "10px 0",
-                padding: "10px",
-                width: "calc(100% - 20px)",
-              }}
-            />
-          </div>
-          <div>
-            <label>Электронная почта</label>
-            <input
-              type="email"
-              disabled={true}
-              value={user.email}
-              placeholder="Электронная почта"
-              style={{
-                margin: "10px 0",
-                padding: "10px",
-                width: "calc(100% - 20px)",
-              }}
-            />
-          </div>
+        <div className="w-1/2 mx-auto ">
+          <EditableImage link={image} setLink={setImage} />
+        </div>
+
+        <div className="grow mt-4">
+          <label className="text-orange-400">Имя и фамилия</label>
+          <input
+            type="text"
+            placeholder="Введите имя и фамилию"
+            value={userName}
+            onChange={(ev) => setUserName(ev.target.value)}
+            style={{
+              margin: "10px 0",
+              padding: "10px",
+              width: "calc(100% - 20px)",
+            }}
+          />
+        </div>
+        <div>
+          <label className="text-orange-400">Эл. почта</label>
+          <input
+            type="email"
+            disabled={true}
+            value={user.email}
+            placeholder="Электронная почта"
+            style={{
+              margin: "10px 0",
+              padding: "10px",
+              width: "calc(100% - 20px)",
+            }}
+          />
         </div>
 
         <AddressInputs
@@ -99,7 +95,7 @@ export default function UserForm({ user, onSave }) {
                 checked={admin}
                 onChange={(ev) => setAdmin(ev.target.checked)}
               />
-              <span>Администратор</span>
+              <span  className="text-orange-400" >Администратор</span>
             </label>
           </div>
         )}

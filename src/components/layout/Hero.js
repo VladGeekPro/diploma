@@ -32,7 +32,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative gap-8">
+      <div className="relative top-0 right-0  ">
         <Image
           src={"/PhoneLogo.webp"}
           layout={"fill"}

@@ -63,12 +63,11 @@ export default function MenuPage() {
           background:
             "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)",
           width: "45px",
-          height: "150px",
+          height: "50px",
           borderRadius: "30px",
           boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-          right: "-35px",
+          right: "-50px",
           zIndex: 1,
-          border: "2px solid #FFFFFF", // White border
         }}
         onClick={onClick}
       ></div>
@@ -88,12 +87,11 @@ export default function MenuPage() {
           background:
             "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)",
           width: "45px",
-          height: "150px",
+          height: "50px",
           borderRadius: "30px",
           boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-          left: "-30px", // Adjust this if needed to position correctly
+          left: "-50px", // Adjust this if needed to position correctly
           zIndex: 1,
-          border: "2px solid #FFFFFF", // White border
         }}
         onClick={onClick}
       ></div>
@@ -101,7 +99,7 @@ export default function MenuPage() {
   }
 
   return (
-    <section className="mt-8 bg-gradient-to-r from-violet-200  to-orange-400 py-2  ">
+    <section className="mt-8  py-2  ">
       {categories?.length > 0 &&
         categories.map((c) => (
           <div key={c._id} className="my-16 mx-4">

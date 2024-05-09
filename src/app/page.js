@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/Header";
 import Hero from "@/components/layout/Hero";
 import HomeMenu from "@/components/layout/HomeMenu";
@@ -14,7 +13,10 @@ export default function Home() {
         <SectionHeaders subHeader="Откройте для себя" mainHeader="О нас" />
       </div>
 
-      <section  className=" mt-4  bg-gradient-to-b from-blue-600  to-orange-400 p-6 rounded-lg text-center relative overflow-hidden">
+      <section
+        className=" mt-4 bg-gradient-to-r from-[#00c6ff] to-[#0072ff]   p-6 rounded-lg text-center relative overflow-hidden"
+        
+      >
         <div className="text-white max-w-3xl mx-auto mt-4 flex flex-col gap-4">
           <p>
             Наш интернет-магазин предлагает широкий ассортимент телефонов, от
@@ -42,15 +44,17 @@ export default function Home() {
           mainHeader="Свяжись с нами сейчас!"
         />
       </div>
-      <section className=" mt-4  bg-gradient-to-t from-blue-600  to-orange-400 p-6 rounded-lg text-center relative overflow-hidden">
-          <a
-            className="text-4xl font-bold text-white hover:text-orange-400 transition duration-300 ease-in-out transform hover:scale-110"
-            href="tel:+37368943589"
-          >
-            +373 689 43 589
-          </a>
+      <section
+        className=" mt-4  bg-gradient-to-r from-[#00c6ff] to-[#0072ff]  p-6 rounded-lg text-center relative overflow-hidden"
+       
+      >
+        <a
+          className="text-4xl font-bold text-white hover:text-orange-400 transition duration-300 ease-in-out transform hover:scale-110"
+          href="tel:+37368943589"
+        >
+          +373 689 43 589
+        </a>
       </section>
-
     </>
   );
 }

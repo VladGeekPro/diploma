@@ -30,14 +30,14 @@ export default function RegisterPage() {
 
   return (
     <div className="hero flex mt-10  ">
-      <div className="image-container">
+      <div className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff]">
         <h2 className="text-orange-400 font-bold text-3xl mb-5 ">
           Добро пожаловать!
         </h2>
         <div className="font-semibold text-center p-4">
         Пожалуйста, войдите, чтобы оставаться на связи.
         </div>
-        <div className="text-center my-4 bg-orange-400  border p-2 rounded-xl w-1/2     ">
+        <div className="text-center my-4 bg-orange-400 p-2 rounded-xl w-1/2">
           <Link href={'/login'}>Войти </Link>
         </div>
       </div>
