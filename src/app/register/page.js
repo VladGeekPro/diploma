@@ -30,7 +30,7 @@ export default function RegisterPage() {
 
   return (
     <div className="hero flex mt-10  ">
-      <div className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff]">
+      <div className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff] flex flex-col justify-center items-center text-white  px-4 mx-4 rounded-2xl">
         <h2 className="text-orange-400 font-bold text-3xl mb-5 ">
           Добро пожаловать!
         </h2>
