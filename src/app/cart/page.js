@@ -56,19 +56,27 @@ export default function CartPage() {
           cartProducts,
         }),
       }).then(async (response) => {
+        // if (response.ok) {
+        //   resolve();
+        //   window.location = await response.json();
+        // } else {
+        //   reject();
+        // }
         if (response.ok) {
-          resolve();
-          window.location = await response.json();
-        } else {
-          reject();
+          const result = await response.json();
+          alert('Заказ успешно оформлен!');  
+          window.location.href = '/';
+      } else {
+        resolve();
+        window.location.href = '/';
         }
       });
     });
 
     await toast.promise(promise, {
       loading: "Ваш заказ оформляется...",
-      success: "Redirecting to payment...",
-      error: "Something went wrong... Please try again later",
+      success: "Ваш заказ успешно оформлён",
+      error: "Ошибка оформление заказа данные банковского средства не указаны",
     });
   }
 
